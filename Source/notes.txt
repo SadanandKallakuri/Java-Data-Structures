@@ -1,0 +1,22 @@
+Memory locations reserved for our programs-
+1)Stack
+2)Heap
+
+Stack:-
+--------
+when we hit run after writing program, compiler searches for main method and,
+creates an sketch(frame) in stack, that is box for main() and whatever variables we 
+create in main, those will be allocated a space in the main() frame in stack, that 
+stores the value of that variable and the changes done on it.
+All the methods in main() are piled above the frame created previously.
+the local variables in this method are stored in the new frame created.
+
+
+ex: 
+Car myCar= new Car();
+
+here myCar is the reference variable.
+myCar doesnt contain the object "car", myCar is stored in stack whereas car object is stored in heap. and myCar contains the memory location of car object(in heap).
+So, ref vars only contain memory locations, not the actual objects.
+Now consider the foll ex: myCar= new Car();
+Now again a new car object is createdin the heap, the myCar in stack now has the addreess of the new Car object. This means, it no longer has address of the previous object, that car is removed from memory by garbage collection.
